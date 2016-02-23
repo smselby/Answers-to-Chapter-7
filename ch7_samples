@@ -1,0 +1,11 @@
+import re
+
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phoneNumRegex.search('My number is 206-359-5230.')
+print('Phone number found: ' + mo.group())
+
+import re
+birthdayNumRegex = re.compile(r'\d\d.\d\d.\d\d\d\d')
+mo = birthdayNumRegex.search('My birthday is 04-13-1955.')
+mo = birthdayNumRegex.search('Her birthday is 06-23-1951')
+print('Birthday found: ' + mo.group())
